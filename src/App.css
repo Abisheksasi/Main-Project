@@ -1,0 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.hero{
+  background-image: url("./image/website-banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width:428px){
+  .hero{
+    background-image: url("./image/website-mobile-banner.jpg");
+    background-repeat: no-repeat;
+  background-size: cover;
+  }
+}
