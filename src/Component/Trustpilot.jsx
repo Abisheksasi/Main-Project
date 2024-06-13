@@ -84,12 +84,12 @@ function Trustpilot() {
                     </ul>
                 </div>
                 {showPrevButton && (
-                    <button className="btn position-absolute top-50 start-0 translate-middle-y border-0 bg-light" onClick={handlePrev}>
+                    <button className="btn position-absolute top-50 start-0 translate-middle-y border-0 bg-light pervious" onClick={handlePrev}>
                         <FaChevronLeft />
                     </button>
                 )}
                 {showNextButton && (
-                    <button className="btn position-absolute top-50 end-0 translate-middle-y border-0 bg-light" onClick={handleNext}>
+                    <button className="btn position-absolute top-50 end-0 translate-middle-y border-0 bg-light next" onClick={handleNext}>
                         <FaChevronRight />
                     </button>
                 )}

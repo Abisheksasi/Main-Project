@@ -34,8 +34,8 @@ const Referral = () => {
 
   return (
     <div className='Refer mt-5'>
-      <h1 className='Heading text-start'>Book your Perfect Accommodation</h1>
-      <p className='Paragrph text-start'>Take the hassle out of securing your student home for the best years of your life</p>
+      <h1 className='Heading text-start'>Amber Referral Program and Offers</h1>
+      <p className='Paragrph text-start'>Several promotions, deals and special offers crafted just for you.</p>
       <div className="position-relative ms-3 me-3">
         <div className="Referral-container" ref={sliderRef} >
           <ul className="Referral list-unstyled d-flex gap-3">
@@ -61,12 +61,12 @@ const Referral = () => {
           </ul>
         </div>
         {showPrevButton && (
-          <button className="btn position-absolute top-50 start-0 translate-middle-y border-0 bg-light" onClick={handlePrev}>
+          <button className="btn position-absolute top-50 start-0 translate-middle-y border-0 bg-light pervious" onClick={handlePrev}>
             <FaChevronLeft />
           </button>
         )}
         {showNextButton && (
-          <button className="btn position-absolute top-50 end-0 translate-middle-y border-0 bg-light" onClick={handleNext}>
+          <button className="btn position-absolute top-50 end-0 translate-middle-y border-0 bg-light next" onClick={handleNext}>
             <FaChevronRight />
           </button>
         )}

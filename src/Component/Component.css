@@ -193,7 +193,6 @@ li {
 .Referral-container::-webkit-scrollbar {
   display: none;
 }
-
 /* Referral page css end */
 /* Trustpilot page css start  */
 .Trustpilot .Heading {
@@ -301,6 +300,157 @@ li {
 .Easy-step{
   position: relative;
 }
+/* Easy page css end  */
+/* House page css */
+.House1{
+  width: 100%;
+}
+.House2{
+  width: 100%;
+}
+
+.partners h1, .list h1{
+  font-size: 23px;
+  font-weight: 700;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #ffff;
+ padding-top: 130px;
+}
+.House-container p{
+  font-size: 14px;
+  font-weight: 700;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #ffff;
+}
+.partners button,.list button{
+  width: max-content;
+  background-color: rgb(63, 131, 248);
+  color: #ffff;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.list button{
+  margin-bottom: 40px;
+}
+.House-container .house-icon{
+  font-size: 18px;
+  color: #ffff;
+}
+ .partners{
+  background-image: url("../image/home_parter_with_us.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+ .list{
+  background-image: url("../image/home_list_with_us.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* House page css end  */
+/* Help page css  */
+.Help{
+  width: 85%;
+}
+.Help h1{
+  font-size: 25px;
+  font-weight: 700;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.Help p{
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(112, 112, 112);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.Chat {
+  border: 1px solid #ED3A56;
+  width: 90%;
+  position: relative;
+}
+.chat-smile{
+  font-size: 40px;
+  font-weight: 100;
+}
+.Chat h6{
+  font-size: 14px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.Chat .chat-bot{
+  width: max-content;
+  background-color: #ED3A56;
+  color: #ffff;
+  font-size: 12px;
+  font-weight: 500;
+  position: absolute;
+  top: -7px;
+  left: 22px;
+}
+.whatsapp{
+  border: 1px solid #31C48D;
+}
+.whatsapp-chat{
+  background-color: #31C48D;
+  width: max-content;
+  color: #ffff;
+  font-size: 12px;
+  font-weight: 500;
+  position: absolute;
+  top: -7px;
+  left: 22px;
+}
+.whatsapp-icon{
+  font-size: 35px;
+  font-weight: 100;
+  color: #31C48D;
+}
+.Email{
+  border: 1px solid #E5E7EB;
+}
+.Call{
+  border: 1px solid #E5E7EB;
+}
+.chat-mail{
+  color: #E3A008;
+  font-size: 42px;
+}
+.call-phone{
+  color: rgb(63, 131, 248);
+  font-size: 42px;
+}
+.Need-Help{
+  margin-top: 100px;
+}
+/* Help page css end  */
+/* footer page css  */
+.footer img{
+ width: 20%;
+}
+.footer p{
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(93, 92, 92);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.foot-rat{
+  background-color: rgba(213, 213, 213, 0.338);
+}
+.foot-rat .foot-icon{
+  width: 30%;
+}
+.foot-rat h6{
+  font-size: 16px;
+  font-weight: 700;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.foot-rat span{
+  font-size: 14px;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.foot-rat .rating{
+  font-size: 14px;
+}
 @media screen and (max-width: 1024px) {
   .homepage .home img {
     width: 40px;
@@ -378,8 +528,27 @@ li {
   .Easy{
     gap: 30px;
   }
+  /* Esay page css end */
+  /* House page css  */
+  .partners{
+    background-image: url("../image/home_mobile_partner_with_us.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+   .list{
+    background-image: url("../image/home_mobile_list_with_us.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  /* easy page css end  */
+  /* help page css  */
+  .whatsapp-chat{
+    left: 32px;
+  }
+  .Chat .chat-bot{
+    left: 32px;
+  }
 }
-
 @media screen and (max-width: 768px) {
   .gallery {
     scroll-snap-type: x mandatory;
@@ -453,7 +622,12 @@ li {
   .Refer .Paragrph {
     margin-left: 25px;
   }
-
+  .pervious{
+    display: none;
+  }
+  .next{
+    display: none;
+  }
   /* Referral css page end */
   /* Trustpoilt page css start  */
   .Trustpilot .Heading {
@@ -485,7 +659,25 @@ li {
   .Trustpilot-container h5 {
     font-size: 15px;
   }
-  /* Easy page css */
+  /* House page css */
+.House{
+  gap: 20px;
+}
+/* house page css end  */
+  /* help page css  */
+  .whatsapp-chat{
+    left: 7px;
+  }
+  .Chat .chat-bot{
+    left: 7px;
+  }
+  .Help h1{
+    font-size: 18px;
+    
+  }
+  .Help p{
+    font-size: 15px;
+  }
 }
 
 @media screen and (max-width: 428px) {
@@ -559,4 +751,21 @@ li {
     font-size: 14px;
   }
   /* Easy page css */
+    /* help page css  */
+    .whatsapp-chat{
+      left: 120px;
+    }
+    .Chat .chat-bot{
+      left: 120px;
+    }
+    .Help-center{
+      gap: 20px;
+    }
+    .Help h1{
+      font-size: 18px;
+      
+    }
+    .Help p{
+      font-size: 11px;
+    }
 }
