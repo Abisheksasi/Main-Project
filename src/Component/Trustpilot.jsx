@@ -1,12 +1,13 @@
-import Star from '../image/starTrustpilot.svg';
-import Simon from '../image/simon.avif';
-import Robert from '../image/Robert.avif';
-import pavneech from '../image/pavneech.avif';
-import Ashwini from '../image/Ashwini.png';
-import Rat from '../image/rating.svg';
 import React, { useState, useRef, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import Star from '../image/starTrustpilot.svg';
+import Simon from '../image/simon.avif';
+import Robert from '../image/Robert.avif';
+import Pavneech from '../image/pavneech.avif';
+import Ashwini from '../image/Ashwini.png';
+import Rat from '../image/rating.svg';
+
 function Trustpilot() {
     const sliderRef = useRef(null);
     const [showPrevButton, setShowPrevButton] = useState(false);
@@ -14,14 +15,18 @@ function Trustpilot() {
 
     useEffect(() => {
         const handleScroll = () => {
-            const { scrollLeft, scrollWidth, clientWidth } = sliderRef.current;
-            setShowPrevButton(scrollLeft > 0);
-            setShowNextButton(scrollLeft < scrollWidth - clientWidth);
+            if (sliderRef.current) {
+                const { scrollLeft, scrollWidth, clientWidth } = sliderRef.current;
+                setShowPrevButton(scrollLeft > 0);
+                setShowNextButton(scrollLeft < scrollWidth - clientWidth);
+            }
         };
 
         if (sliderRef.current) {
             sliderRef.current.addEventListener('scroll', handleScroll);
         }
+
+        // Cleanup event listener on component unmount
         return () => {
             if (sliderRef.current) {
                 sliderRef.current.removeEventListener('scroll', handleScroll);
@@ -30,12 +35,17 @@ function Trustpilot() {
     }, []);
 
     const handleNext = () => {
-        sliderRef.current.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
+        if (sliderRef.current) {
+            sliderRef.current.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
+        }
     };
 
     const handlePrev = () => {
-        sliderRef.current.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
+        if (sliderRef.current) {
+            sliderRef.current.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
+        }
     };
+
     return (
         <div className="Trustpilot mt-5">
             <h1 className="Heading">What do students have to say about us?</h1>
@@ -46,7 +56,7 @@ function Trustpilot() {
                 <h6 className='review ms-2 rounded-pill ps-2 pe-2 me-2'>4.8/5</h6>
             </button>
             <div className="position-relative ms-3 me-3">
-                <div className="Referral-container" ref={sliderRef} >
+                <div className="Referral-container" ref={sliderRef}>
                     <ul className="Referral list-unstyled d-flex gap-3 Trustpilot-container">
                         <li className='rounded text-start Trustpilot-container border border-black-50'>
                             <div className='Simon d-flex flex-row'>
@@ -59,7 +69,7 @@ function Trustpilot() {
                         <li className='rounded text-start Trustpilot-container border border-black-50'>
                             <div className='Simon d-flex flex-row'>
                                 <img src={Robert} alt="Simon" className='ms-3 mt-3 rounded-circle' />
-                                <h1 className='ms-4 mt-4'>Roberto Antonia<h6>University College London</h6></h1>
+                                <h1 className='ms-4 mt-4'>Roberto Antonia <h6>University College London</h6></h1>
                                 <img src={Rat} alt="Rating" className='ms-5 me-1 Rating-img' /> <br />
                             </div>
                             <h5 className='text-secondary text-start ms-4 me-4 mt-2 mb-4'>Experience was amazing!! I’m going to Plymouth College of <br /> Art. Great prices & the rent durations are negotiable. Also as <br /> an art student I do appreciate the website design — its clear, <br /> visible & well placed.</h5>
@@ -74,13 +84,12 @@ function Trustpilot() {
                         </li>
                         <li className='rounded text-start Trustpilot-container border border-black-50'>
                             <div className='Simon d-flex flex-row'>
-                                <img src={pavneech} alt="Simon" className='ms-3 mt-3 rounded-circle' />
-                                <h1 className='ms-4 mt-4'>Paveneech Stritagul<h6>Lancaster University</h6></h1>
+                                <img src={Pavneech} alt="Pavneech" className='ms-3 mt-3 rounded-circle' />
+                                <h1 className='ms-4 mt-4'>Paveneech Stritagul <h6>Lancaster University</h6></h1>
                                 <img src={Rat} alt="Rating" className='ms-5 me-1 Rating-img' /> <br />
                             </div>
                             <h5 className='text-secondary text-start ms-4 me-4 mt-2 mb-4'>Experience was amazing!! I’m going to Plymouth College of <br /> Art. Great prices & the rent durations are negotiable. Also as <br /> an art student I do appreciate the website design — its clear, <br /> visible & well placed.</h5>
                         </li>
-
                     </ul>
                 </div>
                 {showPrevButton && (
@@ -95,6 +104,7 @@ function Trustpilot() {
                 )}
             </div>
         </div>
-    )
+    );
 }
+
 export default Trustpilot;

@@ -41,44 +41,42 @@ function Navigation() {
 
   return (
     <div className='hero'>
-      <>
-        <Navbar 
-          expand="lg" 
-          expanded={expanded} 
-          className={`sticky-top ${navbarBackground ? 'navbar-scrolled' : ''}`} 
-          fixed="top"
-        >
-          <Container fluid>
-            <Navbar.Brand href="#home" className='ms-4'>
-              <img src={Logo} alt='Logo' />
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handlePopupToggle} />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="ms-auto">
-                <Nav.Link href="#home" className="nav-link">
-                  <Download/>
-                </Nav.Link>
-                <Nav.Link href="#link" className="nav-link">
-                  <Support/>
-                </Nav.Link>
-                <Nav.Link href="#link" className="nav-link mt-1">
-                  <div className='short'> 
-                    <IoMdHeartEmpty className='ms-1 me-1 mt-2 mb-2 short-icon' />
-                    <span className='ms-1 mt-2 mb-1 me-2'>Shortlist</span>
-                  </div>
-                </Nav.Link>
-                <Nav.Link href="#link" className="nav-link mt-1">
-                  <Login/>
-                </Nav.Link>
-                <Nav.Link href="#link" className="nav-link mt-1">
-                  <User/>
-                </Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
-        {showPopup && <Mobile onClose={handlePopupToggle} />}
-      </>
+      <Navbar 
+        expand="lg" 
+        expanded={expanded} 
+        className={`sticky-top ${navbarBackground ? 'navbar-scrolled' : ''}`} 
+        fixed="top"
+      >
+        <Container fluid>
+          <Navbar.Brand href="#home" className='ms-4'>
+            <img src={Logo} alt='Logo' />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleToggle} />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ms-auto">
+              <Nav.Link href="#home" className="nav-link">
+                <Download/>
+              </Nav.Link>
+              <Nav.Link href="#link" className="nav-link">
+                <Support/>
+              </Nav.Link>
+              <Nav.Link href="#link" className="nav-link mt-1">
+                <div className='short'> 
+                  <IoMdHeartEmpty className='ms-1 me-1 mt-2 mb-2 short-icon' />
+                  <span className='ms-1 mt-2 mb-1 me-2'>Shortlist</span>
+                </div>
+              </Nav.Link>
+              <Nav.Link href="#link" className="nav-link mt-1">
+                <Login/>
+              </Nav.Link>
+              <Nav.Link href="#link" className="nav-link mt-1">
+                <User/>
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+      {showPopup && <Mobile onClose={handlePopupToggle} />}
       <div style={{ height: '100px' }}></div>
       <Hero/>
     </div>

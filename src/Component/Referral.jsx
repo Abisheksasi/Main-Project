@@ -9,14 +9,18 @@ const Referral = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const { scrollLeft, scrollWidth, clientWidth } = slider.current;
-      setShowPrevButton(scrollLeft > 0);
-      setShowNextButton(scrollLeft < scrollWidth - clientWidth);
+      if (slider.current) {
+        const { scrollLeft, scrollWidth, clientWidth } = slider.current;
+        setShowPrevButton(scrollLeft > 0);
+        setShowNextButton(scrollLeft < scrollWidth - clientWidth);
+      }
     };
 
     if (slider.current) {
       slider.current.addEventListener('scroll', handleScroll);
     }
+
+    // Cleanup event listener on component unmount
     return () => {
       if (slider.current) {
         slider.current.removeEventListener('scroll', handleScroll);
@@ -25,11 +29,15 @@ const Referral = () => {
   }, []);
 
   const handleNext = () => {
-    slider.current.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
+    if (slider.current) {
+      slider.current.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
+    }
   };
 
   const handlePrev = () => {
-    slider.current.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
+    if (slider.current) {
+      slider.current.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
+    }
   };
 
   return (
@@ -47,8 +55,7 @@ const Referral = () => {
             </li>
             <li className='Win rounded text-start Cashback'>
               <h1 className='text-start'>Get additional £20 cashback on your booking!</h1>
-              <div className='color'>
-              </div>
+              <div className='color'></div>
               <p className='text-start'>Book your student accommodation via the amber app to avail this offer!</p>
               <button className='pt-1 ps-3 pe-3 pb-1'>Avail Now</button>
             </li>
