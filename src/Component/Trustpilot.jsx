@@ -15,15 +15,15 @@ function Trustpilot() {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (StudentRating .current) {
-                const { scrollLeft, scrollWidth, clientWidth } = StudentRating .current;
+            if (StudentRating.current) {
+                const {scrollLeft, scrollWidth, clientWidth} = StudentRating.current;
                 setShowPrevButton(scrollLeft > 0);
                 setShowNextButton(scrollLeft < scrollWidth - clientWidth);
             }
         };
 
         if (StudentRating.current) {
-            StudentRating .current.addEventListener('scroll', handleScroll);
+            StudentRating.current.addEventListener('scroll', handleScroll);
         }
         return () => {
             if (StudentRating.current) {
@@ -31,7 +31,6 @@ function Trustpilot() {
             }
         };
     }, []);
-
     const handleNext = () => {
         if (StudentRating.current) {
             StudentRating.current.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
