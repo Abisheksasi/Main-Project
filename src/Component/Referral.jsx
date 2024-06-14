@@ -3,33 +3,33 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import './Component.css';
 
 const Referral = () => {
-  const sliderRef = useRef(null);
+  const slider = useRef(null);
   const [showPrevButton, setShowPrevButton] = useState(false);
   const [showNextButton, setShowNextButton] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
-      const { scrollLeft, scrollWidth, clientWidth } = sliderRef.current;
+      const { scrollLeft, scrollWidth, clientWidth } = slider.current;
       setShowPrevButton(scrollLeft > 0);
       setShowNextButton(scrollLeft < scrollWidth - clientWidth);
     };
 
-    if (sliderRef.current) {
-      sliderRef.current.addEventListener('scroll', handleScroll);
+    if (slider.current) {
+      slider.current.addEventListener('scroll', handleScroll);
     }
     return () => {
-      if (sliderRef.current) {
-        sliderRef.current.removeEventListener('scroll', handleScroll);
+      if (slider.current) {
+        slider.current.removeEventListener('scroll', handleScroll);
       }
     };
   }, []);
 
   const handleNext = () => {
-    sliderRef.current.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
+    slider.current.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
   };
 
   const handlePrev = () => {
-    sliderRef.current.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
+    slider.current.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
   };
 
   return (
@@ -37,7 +37,7 @@ const Referral = () => {
       <h1 className='Heading text-start'>Amber Referral Program and Offers</h1>
       <p className='Paragrph text-start'>Several promotions, deals and special offers crafted just for you.</p>
       <div className="position-relative ms-3 me-3">
-        <div className="Referral-container" ref={sliderRef} >
+        <div className="Referral-container" ref={slider} >
           <ul className="Referral list-unstyled d-flex gap-3">
             <li className='Win rounded text-start'>
               <h1 className='text-start'>Win £50 in just a few steps! Refer a friend and earn your reward</h1>

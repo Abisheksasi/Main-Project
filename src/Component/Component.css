@@ -108,7 +108,6 @@ li {
   flex: 0 0 auto;
   transition: transform 0.5s ease-in-out;
 }
-
 .Win {
   width: 45%;
   background-image: url('../image/refer8.png');
@@ -116,7 +115,6 @@ li {
   background-size: cover;
   background-position: center;
 }
-
 .Win h1 {
   font-size: 23px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -525,6 +523,7 @@ li {
 .Footer .facbook, .youtbe{
   width: 13%;
 }
+
 /* Footer page css end  */
 @media screen and (max-width: 1024px) {
   .homepage .home img {
@@ -640,6 +639,12 @@ li {
   .Footer .facbook, .youtbe{
     width: 18%;
   }
+  .footer img{
+    width: 30%;
+   }
+   .footer p{
+     font-size: 16px;
+   }
 }
 @media screen and (max-width: 768px) {
   .gallery {
@@ -787,6 +792,12 @@ li {
   .Footer .facbook, .youtbe{
     width: 3%;
   }
+  .footer img{
+    width: 10%;
+   }
+   .footer p{
+     font-size: 16px;
+   }
 }
 
 @media screen and (max-width: 428px) {
@@ -882,4 +893,10 @@ li {
     .Footer .facbook, .youtbe{
       width: 7%;
     }
+    .footer img{
+      width: 20%;
+     }
+     .footer p{
+       font-size: 12px;
+     }
 }
