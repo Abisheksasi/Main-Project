@@ -19,11 +19,6 @@ const Referral = () => {
     if (Earn.current) {
       Earn.current.addEventListener('scroll', handleScroll);
     }
-    // return () => {
-    //   if (Earn.current) {
-    //     Earn.current.removeEventListener('scroll', handleScroll);
-    //   }
-    // };
   }, []);
 
   const handleNext = () => {
