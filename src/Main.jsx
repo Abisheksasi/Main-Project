@@ -13,9 +13,9 @@ function Main() {
         <div>
            <Navigation/>
            <HomePage/>
-           <Referral/>
+           {/* <Referral/> */}
            <Accommodation/>
-           <Trustpilot/>
+           {/* <Trustpilot/> */}
            <Easy/>
            <House/>
            <Help/>
