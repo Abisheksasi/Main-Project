@@ -19,11 +19,11 @@ const Referral = () => {
     if (Earn.current) {
       Earn.current.addEventListener('scroll', handleScroll);
     }
-    return () => {
-      if (Earn.current) {
-        Earn.current.removeEventListener('scroll', handleScroll);
-      }
-    };
+    // return () => {
+    //   if (Earn.current) {
+    //     Earn.current.removeEventListener('scroll', handleScroll);
+    //   }
+    // };
   }, []);
 
   const handleNext = () => {
@@ -37,13 +37,12 @@ const Referral = () => {
       Earn.current.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
     }
   };
-
   return (
     <div className='Refer mt-5'>
       <h1 className='Heading text-start'>Amber Referral Program and Offers</h1>
       <p className='Paragrph text-start'>Several promotions, deals and special offers crafted just for you.</p>
       <div className="position-relative ms-3 me-3">
-        <div className="Referral-container" ref={Earn} >
+        <div className="Referral-container" ref={Earn}>
           <ul className="Referral list-unstyled d-flex gap-3">
             <li className='Win rounded text-start'>
               <h1 className='text-start'>Win £50 in just a few steps! Refer a friend and earn your reward</h1>
