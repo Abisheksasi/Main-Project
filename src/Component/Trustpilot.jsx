@@ -9,38 +9,38 @@ import Ashwini from '../image/Ashwini.png';
 import Rat from '../image/rating.svg';
 
 function Trustpilot() {
-    const Trust = useRef(null);
+    const Trustp = useRef(null);
     const [showPrevButton, setShowPrevButton] = useState(false);
     const [showNextButton, setShowNextButton] = useState(true);
 
     useEffect(() => {
         const handleScroll = () => {
-            if (Trust.current) {
-                const { scrollLeft, scrollWidth, clientWidth } = Trust.current;
+            if (Trustp.current) {
+                const { scrollLeft, scrollWidth, clientWidth } = Trustp.current;
                 setShowPrevButton(scrollLeft > 0);
                 setShowNextButton(scrollLeft < scrollWidth - clientWidth);
             }
         };
 
-        if (Trust.current) {
-            Trust.current.addEventListener('scroll', handleScroll);
+        if (Trustp.current) {
+            Trustp.current.addEventListener('scroll', handleScroll);
         }
         return () => {
-            if (Trust.current) {
-                Trust.current.removeEventListener('scroll', handleScroll);
+            if (Trustp.current) {
+                Trustp.current.removeEventListener('scroll', handleScroll);
             }
         };
     }, []);
 
     const handleNext = () => {
-        if (Trust.current) {
-            Trust.current.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
+        if (Trustp.current) {
+            Trustp.current.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
         }
     };
 
     const handlePrev = () => {
-        if (Trust.current) {
-            Trust.current.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
+        if (Trustp.current) {
+            Trustp.current.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
         }
     };
 
@@ -54,7 +54,7 @@ function Trustpilot() {
                 <h6 className='review ms-2 rounded-pill ps-2 pe-2 me-2'>4.8/5</h6>
             </button>
             <div className="position-relative ms-3 me-3">
-                <div className="Referral-container" ref={Trust}>
+                <div className="Referral-container" ref={Trustp}>
                     <ul className="Referral list-unstyled d-flex gap-3 Trustpilot-container">
                         <li className='rounded text-start Trustpilot-container border border-black-50'>
                             <div className='Simon d-flex flex-row'>

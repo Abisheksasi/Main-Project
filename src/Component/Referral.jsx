@@ -3,40 +3,38 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import './Component.css';
 
 const Referral = () => {
-  const slider = useRef(null);
+  const referral = useRef(null);
   const [showPrevButton, setShowPrevButton] = useState(false);
   const [showNextButton, setShowNextButton] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (slider.current) {
-        const { scrollLeft, scrollWidth, clientWidth } = slider.current;
+      if (referral.current) {
+        const { scrollLeft, scrollWidth, clientWidth } = referral.current;
         setShowPrevButton(scrollLeft > 0);
         setShowNextButton(scrollLeft < scrollWidth - clientWidth);
       }
     };
 
-    if (slider.current) {
-      slider.current.addEventListener('scroll', handleScroll);
+    if (referral.current) {
+      referral.current.addEventListener('scroll', handleScroll);
     }
-
-    // Cleanup event listener on component unmount
     return () => {
-      if (slider.current) {
-        slider.current.removeEventListener('scroll', handleScroll);
+      if (referral.current) {
+        referral.current.removeEventListener('scroll', handleScroll);
       }
     };
   }, []);
 
   const handleNext = () => {
-    if (slider.current) {
-      slider.current.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
+    if (referral.current) {
+      referral.current.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
     }
   };
 
   const handlePrev = () => {
-    if (slider.current) {
-      slider.current.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
+    if (referral.current) {
+      referral.current.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
     }
   };
 
@@ -45,7 +43,7 @@ const Referral = () => {
       <h1 className='Heading text-start'>Amber Referral Program and Offers</h1>
       <p className='Paragrph text-start'>Several promotions, deals and special offers crafted just for you.</p>
       <div className="position-relative ms-3 me-3">
-        <div className="Referral-container" ref={slider} >
+        <div className="Referral-container" ref={referral} >
           <ul className="Referral list-unstyled d-flex gap-3">
             <li className='Win rounded text-start'>
               <h1 className='text-start'>Win £50 in just a few steps! Refer a friend and earn your reward</h1>
