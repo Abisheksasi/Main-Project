@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { TbMessageChatbot } from "react-icons/tb"; 
-import { IoLogoWhatsapp } from 'react-icons/io';
+import { BsWhatsapp } from "react-icons/bs";
 function Help() {
     return (
         <Container className="Need-Help">
@@ -32,7 +32,7 @@ function Help() {
                     {/* <span className='d-flex flex-row ms-3 me-3'><span className="dot">•</span> 2 Min Replay</span> */}
                   </span>
                   <div className='d-flex justify-content-center mt-4'>
-                  <IoLogoWhatsapp className="me-2 mt-2 whatsapp-icon"/>
+                  <BsWhatsapp className="me-2 mt-2 whatsapp-icon"/>
                   </div>
                   <h6 className='d-flex justify-content-center mb-3'>Chat On Whatsapp</h6>
                 </div>

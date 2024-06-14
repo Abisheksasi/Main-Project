@@ -91,7 +91,7 @@ const Mobile = ({ onClose }) => {
                     <span className='ms-2 me-1 mt-1 text-dark fw-normal'>Shortlist</span>
                 </div>
                 <hr className='w-100 m-0 b-0 mt-2' />
-                <p className='mt-2 ps-2 w-100 bg-secondary'>Login to Continue</p>
+                <p className='mt-2 ps-2 w-100 '>Login to Continue</p>
                 <Dropdown.Item href="#/action-3" className='d-flex align-items-center mt-2' style={{ width: '100%' }}>
                 <CiUser  style={{fontSize: '22px', fontWeight: '400' }} className='me-2' />
                     <span className='mt-2 ms-2'>Group Booking</span>
