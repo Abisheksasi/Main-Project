@@ -51,8 +51,8 @@ function Navigation() {
           <Navbar.Brand href="#home" className='ms-4'>
             <img src={Logo} alt='Logo' />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleToggle} />
-          <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handlePopupToggle} />
+          <Navbar.Collapse id="basic-navbar-nav" onClick={handleToggle}>
             <Nav className="ms-auto">
               <Nav.Link href="#home" className="nav-link">
                 <Download/>
