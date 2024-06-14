@@ -25,11 +25,6 @@ function Trustpilot() {
         if (StudentRating.current) {
             StudentRating.current.addEventListener('scroll', handleScroll);
         }
-        return () => {
-            if (StudentRating.current) {
-                StudentRating.current.removeEventListener('scroll', handleScroll);
-            }
-        };
     }, []);
     const handleNext = () => {
         if (StudentRating.current) {
