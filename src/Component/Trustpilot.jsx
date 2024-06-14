@@ -9,40 +9,38 @@ import Ashwini from '../image/Ashwini.png';
 import Rat from '../image/rating.svg';
 
 function Trustpilot() {
-    const sliderRef = useRef(null);
+    const Trust = useRef(null);
     const [showPrevButton, setShowPrevButton] = useState(false);
     const [showNextButton, setShowNextButton] = useState(true);
 
     useEffect(() => {
         const handleScroll = () => {
-            if (sliderRef.current) {
-                const { scrollLeft, scrollWidth, clientWidth } = sliderRef.current;
+            if (Trust.current) {
+                const { scrollLeft, scrollWidth, clientWidth } = Trust.current;
                 setShowPrevButton(scrollLeft > 0);
                 setShowNextButton(scrollLeft < scrollWidth - clientWidth);
             }
         };
 
-        if (sliderRef.current) {
-            sliderRef.current.addEventListener('scroll', handleScroll);
+        if (Trust.current) {
+            Trust.current.addEventListener('scroll', handleScroll);
         }
-
-        // Cleanup event listener on component unmount
         return () => {
-            if (sliderRef.current) {
-                sliderRef.current.removeEventListener('scroll', handleScroll);
+            if (Trust.current) {
+                Trust.current.removeEventListener('scroll', handleScroll);
             }
         };
     }, []);
 
     const handleNext = () => {
-        if (sliderRef.current) {
-            sliderRef.current.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
+        if (Trust.current) {
+            Trust.current.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
         }
     };
 
     const handlePrev = () => {
-        if (sliderRef.current) {
-            sliderRef.current.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
+        if (Trust.current) {
+            Trust.current.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
         }
     };
 
@@ -56,7 +54,7 @@ function Trustpilot() {
                 <h6 className='review ms-2 rounded-pill ps-2 pe-2 me-2'>4.8/5</h6>
             </button>
             <div className="position-relative ms-3 me-3">
-                <div className="Referral-container" ref={sliderRef}>
+                <div className="Referral-container" ref={Trust}>
                     <ul className="Referral list-unstyled d-flex gap-3 Trustpilot-container">
                         <li className='rounded text-start Trustpilot-container border border-black-50'>
                             <div className='Simon d-flex flex-row'>
