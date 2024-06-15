@@ -1,6 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
-import Dropdown from 'react-bootstrap/Dropdown';
 import './Search.css';
 
 function Search() {
