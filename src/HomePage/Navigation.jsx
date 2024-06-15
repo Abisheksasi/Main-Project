@@ -10,6 +10,7 @@ import Login from './Login';
 import User from './User';
 import Mobile from './Mobile';
 import Hero from '../Component/Hero';
+import Search from './Searchbar';
 
 function Navigation() {
   const [showPopup, setShowPopup] = useState(false); 
@@ -73,6 +74,7 @@ function Navigation() {
       {showPopup && <Mobile onClose={handlePopupToggle} />}
       <div style={{ height: '100px' }}></div>
       <Hero/>
+      <Search/>
     </div>
   );
 }
