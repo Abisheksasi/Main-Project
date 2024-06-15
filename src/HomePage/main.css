@@ -7,8 +7,8 @@
 }
 
 .navbar-scrolled {
-  background-color: #fff; /* Change background color when scrolled */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow when scrolled */
+  background-color: #fff; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
   transition: background-color 0.3s ease-in-out;
 }
 

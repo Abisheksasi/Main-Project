@@ -16,9 +16,7 @@ function Navigation() {
   const [showPopup, setShowPopup] = useState(false); 
   const [navbarBackground, setNavbarBackground] = useState(false);
 
-  const handleToggle = () => {
-    setExpanded(!expanded);
-  };
+
 
   const handlePopupToggle = () => {
     setShowPopup(!showPopup);
@@ -52,7 +50,7 @@ function Navigation() {
             <img src={Logo} alt='Logo' />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handlePopupToggle} />
-          <Navbar.Collapse id="basic-navbar-nav" onClick={handleToggle}>
+          <Navbar.Collapse id="basic-navbar-nav" >
             <Nav className="ms-auto">
               <Nav.Link href="#home" className="nav-link">
                 <Download/>
