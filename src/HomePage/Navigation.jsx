@@ -12,11 +12,8 @@ import Mobile from './Mobile';
 import Hero from '../Component/Hero';
 
 function Navigation() {
-  const [expanded, setExpanded] = useState(false); 
   const [showPopup, setShowPopup] = useState(false); 
   const [navbarBackground, setNavbarBackground] = useState(false);
-
-
 
   const handlePopupToggle = () => {
     setShowPopup(!showPopup);
@@ -41,7 +38,6 @@ function Navigation() {
     <div className='hero'>
       <Navbar 
         expand="lg" 
-        expanded={expanded} 
         className={`sticky-top ${navbarBackground ? 'navbar-scrolled' : ''}`} 
         fixed="top"
       >
