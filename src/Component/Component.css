@@ -968,4 +968,10 @@ display: none;
      .footer p{
        font-size: 12px;
      }
+     .foot-rat span{
+      font-size: 12px;
+     }
+     .foot-rat .rating{
+      font-size: 12px;
+     }
 }
