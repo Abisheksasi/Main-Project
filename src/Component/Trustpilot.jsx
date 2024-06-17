@@ -61,7 +61,7 @@ function Trustpilot() {
                                 <img src={Rat} alt="Rating" className='ms-5 me-1 Rating-img simon-img' /> <br />
                             </div>
                             <h5 className='text-secondary text-start ms-4 me-4 mt-2 mb-4 simon-img'>Experience was amazing!! I’m going to Plymouth College of <br /> Art. Great prices & the rent durations are negotiable. Also as <br /> an art student I do appreciate the website design — its clear, <br /> visible & well placed.</h5>
-                            <h6 className='rating6'>They helped me shortlist, finalise and book a studio for myself for Sept 2023.
+                            <h6 className='rating6 position-relative'>They helped me shortlist, finalise and book a studio for myself for Sept 2023.
                                 {!isExpanded && <span id="dots">...</span>}
                                 {isExpanded && (
                                     <span id="more">
@@ -71,10 +71,10 @@ function Trustpilot() {
                                     {isExpanded ? 'Read less' : 'Read more'}
                                 </button></h6>
                             <div className='d-flex flex-row country-rate first-rating'>
-                                <img src={India} alt="India flag" className='India-flag' />
+                                <img src={India} alt="India flag" className='India-flag position-absolute' />
                                 <div className='first-rating'>
-                                    <h1 className='ms-2 mb-0'>Shivam Sharma</h1><br />
-                                    <h6 className='ms-2'>University Of Leeds</h6>
+                                    <h1 className='ms-2 mb-0 position-absolute'>Shivam Sharma</h1><br />
+                                    <h6 className='ms-2 position-absolute'>University Of Leeds</h6>
                                 </div>
                             </div >
                         </li>
@@ -85,20 +85,20 @@ function Trustpilot() {
                                 <img src={Rat} alt="Rating" className='ms-5 me-1 Rating-img simon-img' /> <br />
                             </div>
                             <h5 className='text-secondary text-start ms-4 me-4 mt-2 mb-4 simon-img'>Experience was amazing!! I’m going to Plymouth College of <br /> Art. Great prices & the rent durations are negotiable. Also as <br /> an art student I do appreciate the website design — its clear, <br /> visible & well placed.</h5>
-                            <h6 className='rating6'>The experience of booking my accomodation and clarifying any doubts I might have on that matter was amazing.
+                            <h6 className='rating6 position-relative'>The experience of booking my accomodation and clarifying any doubts
                                 {!isExpanded && <span id="dots">...</span>}
                                 {isExpanded && (
                                     <span id="more">
-                                        The agent was so helpful and patient with my infinite doubts and guided me through the whole process.
+                                     I might have on that matter was amazing.
                                     </span>
                                 )}      <button onClick={handleToggle} id="myBtn">
                                     {isExpanded ? 'Read less' : 'Read more'}
                                 </button></h6>
                             <div className='d-flex flex-row country-rate'>
-                                <img src={India} alt="India flag" className='India-flag mt-3' />
+                                <img src={India} alt="India flag" className='India-flag mt-3 position-absolute' />
                                 <div>
-                                    <h1 className='mt-4 ms-2 mb-0'>Shubham</h1><br />
-                                    <h6 className='ms-2 mt-1'>The University Of Western Australia</h6>
+                                    <h1 className='mt-4 ms-2 mb-0 position-absolute'>Shubham</h1><br />
+                                    <h6 className='ms-2 mt-1 position-absolute'>The University Of Western Australia</h6>
                                 </div>
                             </div >
                         </li>
@@ -109,12 +109,12 @@ function Trustpilot() {
                                 <img src={Rat} alt="Rating" className='ms-5 me-1 Rating-img simon-img' /> <br />
                             </div>
                             <h5 className='text-secondary text-start ms-4 me-4 mt-2 mb-4 simon-img'>Experience was amazing!! I’m going to Plymouth College of <br /> Art. Great prices & the rent durations are negotiable. Also as <br /> an art student I do appreciate the website design — its clear, <br /> visible & well placed.</h5>
-                            <h6 className='rating6'>Amber's agent was extremely helpful and kind. The process was very smooth as well. Overall I would give 10/10 to amber.</h6>
+                            <h6 className='rating6 position-relative'>Amber's agent was extremely helpful and kind. The process was very smooth as well. Overall I would give 10/10 to amber.</h6>
                             <div className='d-flex flex-row country-rate'>
-                                <img src={India} alt="India flag" className='India-flag mt-3' />
+                                <img src={India} alt="India flag" className='India-flag mt-3 position-absolute' />
                                 <div>
-                                    <h1 className='mt-4  ms-2 mb-0'>Vishnupriya</h1><br />
-                                    <h6 className='ms-2 mt-1'>De Montfort University</h6>
+                                    <h1 className='mt-4  ms-2 mb-0 position-absolute'>Vishnupriya</h1><br />
+                                    <h6 className='ms-2 mt-1 position-absolute'>De Montfort University</h6>
                                 </div>
                             </div >
                         </li>
@@ -125,12 +125,12 @@ function Trustpilot() {
                                 <img src={Rat} alt="Rating" className='ms-5 me-1 Rating-img simon-img' /> <br />
                             </div>
                             <h5 className='text-secondary text-start ms-4 me-4 mt-2 mb-4 simon-img'>Experience was amazing!! I’m going to Plymouth College of <br /> Art. Great prices & the rent durations are negotiable. Also as <br /> an art student I do appreciate the website design — its clear, <br /> visible & well placed.</h5>
-                            <h6 className='rating6'>Best accommodation at cheapest rates.Very proactive. Gave me all the information I needed at the get go. Thank you so much!</h6>
+                            <h6 className='rating6 position-relative'>Best accommodation at cheapest rates.Very proactive. Gave me all the information I needed at the get go. Thank you so much!</h6>
                             <div className='d-flex flex-row country-rate'>
-                                <img src={India} alt="India flag" className='India-flag mt-3' />
+                                <img src={India} alt="India flag" className='India-flag mt-3 position-absolute'/>
                                 <div>
-                                    <h1 className='mt-4 ms-2 mb-0'>Anushka Dogra</h1><br />
-                                    <h6 className='ms-2 mt-1'>Regent'S University</h6>
+                                    <h1 className='mt-4 ms-2 mb-0 position-absolute'>Anushka Dogra</h1><br />
+                                    <h6 className='ms-2 mt-1 position-absolute'>Regent'S University</h6>
                                 </div>
                             </div>
                         </li>
