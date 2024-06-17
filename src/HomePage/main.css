@@ -485,6 +485,7 @@ color:#ffff;
 @media (max-width:428px) {
   .heropage h1{
     font-size: 25px;
+    margin-top: 110px;
   }
   .heropage h6{
     font-size: 15px;
@@ -498,7 +499,7 @@ color:#ffff;
     margin: 3px 4px 3px 4px;
   }
   .heropage .detail-icon-money{
-    font-size: 12px;
+    font-size: 14px;
     margin: 3px 4px 3px 4px;
   }
   .heropage .detail span{
