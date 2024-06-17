@@ -7,7 +7,7 @@ import Help from "./Component/Help";
 import Footer from "./Component/Footer";
 import Trustpilot from "./Component/Trustpilot";
 import Referral from "./Component/Referral";
-import ReadMoreReadLess from "./Component/e";
+
 
 function Main() {
     return (
